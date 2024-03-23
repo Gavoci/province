@@ -27,6 +27,7 @@
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
+    
     if ($conn->connect_error) {
         die("Connessione fallita: " . $conn->connect_error);
     }
@@ -54,11 +55,12 @@
 
     <h2>Comandi disponibili:</h2>
     <ul>
-        <li>Ricerca per CAP: <code>http://localhost/cap/search.php?search_cap=XXXXX</code></li>
-        <li>Ricerca per Provincia: <code>http://localhost/cap/search.php?search_provincia=Nome_Provincia</code></li>
-        <li>Modifica Record: <code>http://localhost/cap/update.php?id=ID_RECORD&new_cap=Nuovo_CAP&new_provincia=Nuova_Provincia</code></li>
-        <li>Elimina Record: <code>http://localhost/cap/delete.php?id=ID_RECORD</code></li>
-        <li>Aggiungi Record: <code>http://localhost/cap/create.php?new_cap=Nuovo_CAP&new_provincia=Nuova_Provincia</code></li>
+        <li>Ricerca per CAP: <code>http://localhost/cap/search/XXXXX</code></li>
+        <li>Ricerca per Provincia: <code>http://localhost/cap/search/Nome_Provincia</code></li>
+        <li>Modifica Record: <code>http://localhost/cap/update/ID_RECORD/Nuovo_CAP/Nuova_Provincia</code></li>
+        <li>Elimina Record: <code>http://localhost/cap/delete/ID_RECORD</code></li>
+        <li>Aggiungi Record: <code>http://localhost/cap/create/Nuovo_CAP/Nuova_Provincia</code></li>
+        <li>Visualizza Tabella: <code>http://localhost/cap/view_table</code></li>
     </ul>
 </body>
 </html>
