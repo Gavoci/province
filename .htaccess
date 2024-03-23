@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /cap/
+
+RewriteRule ^search/(.*)$ search.php?param=$1 [L]
+
+RewriteRule ^update/([^/]+)/([^/]+)/([^/]+)$ update.php?param1=$1&param2=$2&param3=$3 [L]
+
+RewriteRule ^create/([^/]+)/([^/]+)$ create.php?param1=$1&param2=$2 [L]
+
+RewriteRule ^delete/([^/]+)$ delete.php?param=$1 [L]
+
+RewriteRule ^view_table$ view_table.php [L]
